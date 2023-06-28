@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage ('Setup') {
       steps {
-        git branch: 'argroups', url: 'https://github.com/RAMARJUN397/MyWebApplication.git'
+        git branch: 'master', url: 'https://github.com/RAMARJUN397/docker.git'
       }
     }
     stage ('Compile') {
