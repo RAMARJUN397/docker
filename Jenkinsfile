@@ -1,15 +1,12 @@
-pipeline {
-  agent any
- tools{
-        
-        maven  'mvn'
-    }
-  stages {
-    stage ('Setup') {
+node{
+
+
+ stage ('Setup') {
       steps {
         git branch: 'master', url: 'https://github.com/RAMARJUN397/docker.git'
       }
     }
+
     stage ('Compile') {
       steps {
         sh 'mvn compile'
@@ -27,8 +24,8 @@ pipeline {
     }
   stage ('Delivery') {
       steps {
-        deploy adapters: [tomcat9(credentialsId: 'TomcatCredentials', path: '', url: 'http://15.206.195.98:8080/')], contextPath: '/mydemo', war: '**/*.war'
+        deploy adapters: [tomcat9(credentialsId: 'TomcatCredentials', path: '', url: 'http://15.206.195.98:8080/')], contextPath: '/myar', war: '**/*.war'
       }
     }
-  }
+
 }
