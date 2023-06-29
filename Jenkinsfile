@@ -1,5 +1,9 @@
 node{
-
+ agent any
+ tools{
+        
+        maven  'mvn'
+    }
 
  stage ('Setup') {
       steps {
