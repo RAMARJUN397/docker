@@ -12,7 +12,9 @@ phases:
   post_build:
     commands:
     - echo Build completed on `date`
-    - mvn package
+    - mvn compile
+    - mvn test
+    - mvn clean package
     - mv target/Dockerdemo.war Dockerdemo.war
 artifacts:
   files:
