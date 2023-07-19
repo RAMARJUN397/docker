@@ -1,0 +1,11 @@
+# docker
+sonar.host.url=http://65.0.119.238:9000/ <br/>
+sonar.projectName=JavaProjectDemo <br/>
+sonar.projectKey=MySonar <br/>
+sonar.sourceEncoding=UTF-8 <br/>
+sonar.language=java <br/>
+sonar.java.source=1.7 <br/>
+sonar.java.target=1.7 <br/>
+sonar.projectVersion=4.0 <br/>
+sonar.sources=/var/jenkins_home/workspace/Build <br/>
+sonar.java.binaries=. <br/>
